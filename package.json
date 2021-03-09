@@ -1,5 +1,5 @@
 {
-  "name": "@websocket-healthchecker",
+  "name": "@websocketserver/healthchecker",
   "version": "1.0.0",
   "description": "Single express API method for event scheduling requests.",
   "main": "index.js",
