@@ -5,10 +5,6 @@ import { Initializer } from "./Initializer";
 import { BusinessLayer } from "./orchestration/business.layer";
 //import { KubernetesService } from "./services/kubernetes.service";
 
-const result = dotenv.config();
-if (result.error) {
-  throw result.error;
-}
 
 //Initialization
 let db: Database = new Database();

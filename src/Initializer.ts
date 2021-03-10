@@ -3,11 +3,6 @@ import { Database } from "./database/database";
 import { LogService } from './util/log.services';
 import { BusinessLayer } from "./orchestration/business.layer";
 
-const result = dotenv.config();
-if (result.error) {
-  throw result.error;
-}
-
 const entity: string = "Initializer";
 
 export class Initializer {
