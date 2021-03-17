@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const database_1 = require("./database/database");
+const event_notification_1 = require("./services/event.notification");
+const Initializer_1 = require("./Initializer");
+const business_layer_1 = require("./orchestration/business.layer");
+let db = new database_1.Database();
+let en = new event_notification_1.EventNotification();
+let bs = new business_layer_1.BusinessLayer(db, en);
+let server = new Initializer_1.Initializer(db, bs);
