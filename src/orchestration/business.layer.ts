@@ -33,7 +33,8 @@ export class BusinessLayer {
 
         for(let server of serverlist) {
             try {
-                await this.en.get(JSON.parse(server).address + "/health");
+                const result = await this.en.get(JSON.parse(server).address + "/health");
+                if(result !== 'OK') throw result;
             } catch (err) {
                 serversToDelete.push(server);
                 let users = await this.db.getSet(JSON.parse(server).serverId);
